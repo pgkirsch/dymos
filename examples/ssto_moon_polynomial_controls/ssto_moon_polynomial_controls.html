@@ -1375,11 +1375,11 @@ current value of the polynomial controls.</p>
 <span class="c1">#</span>
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.t_initial&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.t_duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">500.0</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">350000.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">185000.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:vx&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1627.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:vy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">1.0E-6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:m&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">50000</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">350000.0</span><span class="p">])</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">185000.0</span><span class="p">])</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:vx&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;vx&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1627.0</span><span class="p">])</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:vy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;vy&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.0E-6</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:m&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">50000</span><span class="p">])</span>
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.polynomial_controls:tan_theta&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]]</span>
 
 <span class="c1">#</span>
@@ -2776,7 +2776,7 @@ Arguments: ()
 Message: &#39;checking auto_ivc_warnings&#39;
 Arguments: ()
 INFO: checking auto_ivc_warnings
-Full total jacobian was computed 3 times, taking 0.387136 seconds.
+Full total jacobian was computed 3 times, taking 0.378512 seconds.
 Total jacobian shape: (301, 398) 
 
 
@@ -2785,8 +2785,8 @@ FWD solves: 11   REV solves: 0
 Total colors vs. total size: 11 vs 398  (97.2% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.387136 sec.
-Time to compute coloring: 0.487528 sec.
+Time to compute sparsity: 0.378512 sec.
+Time to compute coloring: 0.497350 sec.
 
 
 Optimization Problem -- Optimization using pyOpt_sparse
@@ -2795,11 +2795,11 @@ Optimization Problem -- Optimization using pyOpt_sparse
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                    1.5658
-       User Objective Time :       0.0159
-       User Sensitivity Time :     0.0914
-       Interface Time :            0.1609
-       Opt Solver Time:            1.2976
+    Total Time:                    1.7653
+       User Objective Time :       0.0177
+       User Sensitivity Time :     0.0959
+       Interface Time :            0.1694
+       Opt Solver Time:            1.4823
     Calls to Objective Function :       6
     Calls to Sens Function :            5
 

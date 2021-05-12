@@ -1331,11 +1331,11 @@ end while remaining relatively constant in the middle.</p>
 
 <span class="n">p</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:x&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:xL&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:x&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:xL&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;xL&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.t_initial&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.t_duration&#39;</span><span class="p">,</span> <span class="n">tf</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.controls:u&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;control_input&#39;</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.controls:u&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;u&#39;</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">]))</span>
 
 <span class="c1">#</span>
 <span class="c1"># Solve the problem.</span>
@@ -1385,7 +1385,7 @@ INFO: checking missing_recorders
 WARNING: The Problem has no recorder of any kind attached
 INFO: checking comp_has_no_outputs
 INFO: checking auto_ivc_warnings
-Full total jacobian was computed 3 times, taking 0.484061 seconds.
+Full total jacobian was computed 3 times, taking 0.485162 seconds.
 Total jacobian shape: (239, 328) 
 
 
@@ -1394,8 +1394,8 @@ FWD solves: 13   REV solves: 0
 Total colors vs. total size: 13 vs 328  (96.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.484061 sec.
-Time to compute coloring: 0.354162 sec.
+Time to compute sparsity: 0.485162 sec.
+Time to compute coloring: 0.360930 sec.
 
 
 Optimization Problem -- Optimization using pyOpt_sparse
@@ -1404,11 +1404,11 @@ Optimization Problem -- Optimization using pyOpt_sparse
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                    3.7729
-       User Objective Time :       0.0411
-       User Sensitivity Time :     0.2856
-       Interface Time :            0.3668
-       Opt Solver Time:            3.0794
+    Total Time:                    3.9879
+       User Objective Time :       0.0448
+       User Sensitivity Time :     0.2932
+       Interface Time :            0.3751
+       Opt Solver Time:            3.2748
     Calls to Objective Function :      21
     Calls to Sens Function :           21
 

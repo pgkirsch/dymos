@@ -1757,30 +1757,22 @@ relative to the track.</p>
 <span class="c1"># Now that the OpenMDAO problem is setup, we can set the values of the states.</span>
 
 <span class="c1"># States</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:V&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span>
-          <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>  <span class="c1"># non-zero velocity in order to protect against 1/0 errors.</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:lambda&#39;</span><span class="p">,</span>
-          <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span>
-          <span class="n">units</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span>  <span class="c1"># all other states start at 0</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:omega&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span>
-          <span class="n">units</span><span class="o">=</span><span class="s1">&#39;rad/s&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:alpha&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span>
-          <span class="n">units</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:ax&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span>
-          <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s**2&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:ay&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span>
-          <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s**2&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:n&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span>
-          <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:t&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span>
-          <span class="n">units</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>  <span class="c1"># initial guess for what the final time should be</span>
+<span class="c1"># Nonzero velocity to avoid division by zero errors</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:V&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="c1"># All other states start at 0</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:lambda&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;lambda&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:omega&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;omega&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;rad/s&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:alpha&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:ax&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;ax&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s**2&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:ay&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;ay&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s**2&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:n&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+<span class="c1"># initial guess for what the final time should be</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:t&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
 
 <span class="c1"># Controls</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.controls:delta&#39;</span><span class="p">,</span>
-          <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;control_input&#39;</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.controls:thrust&#39;</span><span class="p">,</span>
-          <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;control_input&#39;</span><span class="p">),</span>
-          <span class="n">units</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># a small amount of thrust can speed up convergence</span>
+<span class="c1"># a small amount of thrust can speed up convergence</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.controls:delta&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;delta&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.controls:thrust&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;thrust&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 
 <span class="n">dm</span><span class="o">.</span><span class="n">run_problem</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">run_driver</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Optimization finished&#39;</span><span class="p">)</span>
@@ -1964,9 +1956,9 @@ relative to the track.</p>
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/phase/phase.py:1573: UserWarning: Phase time options have no effect because fix_duration=True or input_duration=True for phase &#39;phase0&#39;: duration_ref, duration_ref0
+<div class="highlight"><pre><span></span><code>/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/phase/phase.py:1574: UserWarning: Phase time options have no effect because fix_duration=True or input_duration=True for phase &#39;phase0&#39;: duration_ref, duration_ref0
   warnings.warn(&#39;Phase time options have no effect because fix_duration=True or &#39;
-/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/phase/phase.py:1573: UserWarning: Phase time options have no effect because fix_duration=True or input_duration=True for phase &#39;phase0&#39;: duration_ref, duration_ref0
+/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/phase/phase.py:1574: UserWarning: Phase time options have no effect because fix_duration=True or input_duration=True for phase &#39;phase0&#39;: duration_ref, duration_ref0
   warnings.warn(&#39;Phase time options have no effect because fix_duration=True or &#39;
 --- Linkage Report [traj] ---
     --- phase0 - phase0 ---
@@ -2038,9 +2030,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -2119,9 +2111,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -2200,9 +2192,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -2281,9 +2273,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -2362,9 +2354,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -2443,9 +2435,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -2528,9 +2520,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -2609,9 +2601,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -2690,9 +2682,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -2775,9 +2767,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -2860,9 +2852,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -2945,9 +2937,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -3030,9 +3022,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -3115,9 +3107,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -3204,9 +3196,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -3289,9 +3281,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -3374,9 +3366,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -3479,9 +3471,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -3584,9 +3576,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -3689,9 +3681,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -3794,9 +3786,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -3899,9 +3891,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -4008,9 +4000,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -4113,9 +4105,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 184, in test_racecar_for_docs
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/racecar/doc/test_doc_racecar.py&quot;, line 176, in test_racecar_for_docs
     dm.run_problem(p, run_driver=True)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -4158,7 +4150,7 @@ Arguments: ()
 Message: &#39;checking auto_ivc_warnings&#39;
 Arguments: ()
 INFO: checking auto_ivc_warnings
-Full total jacobian was computed 3 times, taking 8.389684 seconds.
+Full total jacobian was computed 3 times, taking 9.123792 seconds.
 Total jacobian shape: (1256, 609) 
 
 
@@ -4167,8 +4159,8 @@ FWD solves: 67   REV solves: 0
 Total colors vs. total size: 67 vs 609  (89.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 8.389684 sec.
-Time to compute coloring: 2.796447 sec.
+Time to compute sparsity: 9.123792 sec.
+Time to compute coloring: 2.854698 sec.
 /usr/share/miniconda/envs/test/lib/python3.8/site-packages/openmdao/core/total_jac.py:1719: DerivativesWarning:Constraints or objectives [&#39;traj.phases.phase0.path_constraints.path:c_fr&#39;, &#39;traj.phases.phase0.path_constraints.path:c_fl&#39;] cannot be impacted by the design variables of the problem.
 /usr/share/miniconda/envs/test/lib/python3.8/site-packages/openmdao/core/total_jac.py:1719: DerivativesWarning:Constraints or objectives [&#39;traj.phases.phase0.path_constraints.path:c_fr&#39;, &#39;traj.phases.phase0.path_constraints.path:c_fl&#39;] cannot be impacted by the design variables of the problem.
 Optimization finished

@@ -2021,10 +2021,10 @@ The following <em>ExplicitComponent</em> computes the state rates for the Van de
     <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.t_duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">t_final</span>
 
     <span class="c1"># add a linearly interpolated initial guess for the state and control curves</span>
-    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:x0&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:x1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:J&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.controls:u&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.75</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.75</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;control_input&#39;</span><span class="p">)</span>
+    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:x0&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;x0&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:x1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;x1&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:J&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.controls:u&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;u&#39;</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.75</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.75</span><span class="p">])</span>
 
     <span class="n">p</span><span class="o">.</span><span class="n">final_setup</span><span class="p">()</span>
 
@@ -3470,7 +3470,7 @@ INFO: checking missing_recorders
 WARNING: The Problem has no recorder of any kind attached
 INFO: checking comp_has_no_outputs
 INFO: checking auto_ivc_warnings
-Full total jacobian was computed 3 times, taking 1.727959 seconds.
+Full total jacobian was computed 3 times, taking 1.786710 seconds.
 Total jacobian shape: (300, 379) 
 
 
@@ -3479,8 +3479,8 @@ FWD solves: 9   REV solves: 0
 Total colors vs. total size: 9 vs 379  (97.6% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 1.727959 sec.
-Time to compute coloring: 0.299936 sec.
+Time to compute sparsity: 1.786710 sec.
+Time to compute coloring: 0.302980 sec.
 Optimization terminated successfully.    (Exit mode 0)
             Current function value: 5.280840345415473
             Iterations: 67
@@ -5531,7 +5531,7 @@ Arguments: ()
 Message: &#39;checking auto_ivc_warnings&#39;
 Arguments: ()
 INFO: checking auto_ivc_warnings
-Full total jacobian was computed 3 times, taking 0.288250 seconds.
+Full total jacobian was computed 3 times, taking 0.293782 seconds.
 Total jacobian shape: (60, 79) 
 
 
@@ -5540,8 +5540,8 @@ FWD solves: 9   REV solves: 0
 Total colors vs. total size: 9 vs 79  (88.6% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.288250 sec.
-Time to compute coloring: 0.063704 sec.
+Time to compute sparsity: 0.293782 sec.
+Time to compute coloring: 0.064578 sec.
 Optimization terminated successfully.    (Exit mode 0)
             Current function value: 5.72485209852227
             Iterations: 39
@@ -5572,7 +5572,7 @@ Optimization Complete
             Segment Order = [5, 5, 5, 5, 5, 5, 5, 5, 3, 3, 3, 3]
         Refined: True
 
-Full total jacobian was computed 3 times, taking 0.093160 seconds.
+Full total jacobian was computed 3 times, taking 0.095960 seconds.
 Total jacobian shape: (72, 104) 
 
 
@@ -5581,8 +5581,8 @@ FWD solves: 27   REV solves: 0
 Total colors vs. total size: 27 vs 104  (74.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.093160 sec.
-Time to compute coloring: 0.129368 sec.
+Time to compute sparsity: 0.095960 sec.
+Time to compute coloring: 0.137831 sec.
 Optimization terminated successfully.    (Exit mode 0)
             Current function value: 5.284612785909781
             Iterations: 12
@@ -5614,7 +5614,7 @@ Optimization Complete
         Refined: True
 
 Model viewer data has already has already been recorded for Driver.
-Full total jacobian was computed 3 times, taking 0.162993 seconds.
+Full total jacobian was computed 3 times, taking 0.166888 seconds.
 Total jacobian shape: (113, 164) 
 
 
@@ -5623,8 +5623,8 @@ FWD solves: 0   REV solves: 15
 Total colors vs. total size: 15 vs 113  (86.7% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.162993 sec.
-Time to compute coloring: 0.133680 sec.
+Time to compute sparsity: 0.166888 sec.
+Time to compute coloring: 0.139871 sec.
 Optimization terminated successfully.    (Exit mode 0)
             Current function value: 5.278911043369152
             Iterations: 8
@@ -5656,7 +5656,7 @@ Optimization Complete
         Refined: True
 
 Model viewer data has already has already been recorded for Driver.
-Full total jacobian was computed 3 times, taking 0.211695 seconds.
+Full total jacobian was computed 3 times, taking 0.215041 seconds.
 Total jacobian shape: (136, 199) 
 
 
@@ -5665,8 +5665,8 @@ FWD solves: 30   REV solves: 0
 Total colors vs. total size: 30 vs 199  (84.9% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.211695 sec.
-Time to compute coloring: 0.264461 sec.
+Time to compute sparsity: 0.215041 sec.
+Time to compute coloring: 0.272553 sec.
 Optimization terminated successfully.    (Exit mode 0)
             Current function value: 5.278210946357875
             Iterations: 7

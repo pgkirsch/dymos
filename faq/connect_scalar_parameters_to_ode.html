@@ -1374,13 +1374,13 @@ The brachistochrone generally won't be in an environment where the local acceler
 <span class="c1"># We use the phase.interpolate method to linearly interpolate values onto the state input nodes.</span>
 <span class="c1"># Since fix_initial=True for all states and fix_final=True for x and y, the initial or final</span>
 <span class="c1"># values of the interpolation provided here will not be changed by the optimizer.</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:x&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:y&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:v&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9.9</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:x&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">]))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:y&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.states:v&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9.9</span><span class="p">]))</span>
 
 <span class="c1"># Guesses for controls are provided at all control_input node.</span>
 <span class="c1"># Here phase.interpolate is used to linearly interpolate values onto the control input nodes.</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.controls:theta&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mf">100.5</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;control_input&#39;</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.controls:theta&#39;</span><span class="p">,</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;theta&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mf">100.5</span><span class="p">]))</span>
 
 <span class="c1"># Set the value for gravitational acceleration.</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.phase0.parameters:g&#39;</span><span class="p">,</span> <span class="mf">9.80665</span><span class="p">)</span>
@@ -1423,7 +1423,7 @@ The brachistochrone generally won't be in an environment where the local acceler
 </code></pre></div>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>Full total jacobian was computed 3 times, taking 0.094253 seconds.
+<div class="highlight"><pre><span></span><code>Full total jacobian was computed 3 times, taking 0.088262 seconds.
 Total jacobian shape: (40, 50) 
 
 
@@ -1432,8 +1432,8 @@ FWD solves: 8   REV solves: 0
 Total colors vs. total size: 8 vs 50  (84.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.094253 sec.
-Time to compute coloring: 0.050640 sec.
+Time to compute sparsity: 0.088262 sec.
+Time to compute coloring: 0.049418 sec.
 Optimization terminated successfully.    (Exit mode 0)
             Current function value: 18.016167304638337
             Iterations: 24

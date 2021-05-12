@@ -2313,8 +2313,8 @@ The four parameters are connected to a source provided by the <em>assumptions</e
 
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.t_initial&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.t_duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">3600.0</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:range&#39;</span><span class="p">][:]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">724.0</span><span class="p">),</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:mass_fuel&#39;</span><span class="p">][:]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">(</span><span class="mi">30000</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">),</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:range&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;range&#39;</span><span class="p">,</span> <span class="n">ys</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">724.0</span><span class="p">))</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:mass_fuel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;mass_fuel&#39;</span><span class="p">,</span> <span class="n">ys</span><span class="o">=</span><span class="p">(</span><span class="mi">30000</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">))</span>
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:alt&#39;</span><span class="p">][:]</span> <span class="o">=</span> <span class="mf">10.0</span>
 
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.controls:mach&#39;</span><span class="p">][:]</span> <span class="o">=</span> <span class="mf">0.8</span>
@@ -2348,7 +2348,7 @@ The four parameters are connected to a source provided by the <em>assumptions</e
 </code></pre></div>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>Full total jacobian was computed 3 times, taking 0.637020 seconds.
+<div class="highlight"><pre><span></span><code>Full total jacobian was computed 3 times, taking 0.665930 seconds.
 Total jacobian shape: (224, 221) 
 
 
@@ -2357,8 +2357,8 @@ FWD solves: 11   REV solves: 0
 Total colors vs. total size: 11 vs 221  (95.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.637020 sec.
-Time to compute coloring: 0.244568 sec.
+Time to compute sparsity: 0.665930 sec.
+Time to compute coloring: 0.249224 sec.
 
 
 Optimization Problem -- Optimization using pyOpt_sparse
@@ -2367,11 +2367,11 @@ Optimization Problem -- Optimization using pyOpt_sparse
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                   25.1330
-       User Objective Time :      15.8079
-       User Sensitivity Time :     4.2287
-       Interface Time :            1.1354
-       Opt Solver Time:            3.9611
+    Total Time:                   26.3295
+       User Objective Time :      16.3223
+       User Sensitivity Time :     4.4003
+       Interface Time :            1.1866
+       Opt Solver Time:            4.4202
     Calls to Objective Function :      77
     Calls to Sens Function :           76
 

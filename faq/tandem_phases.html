@@ -1301,10 +1301,11 @@ are solved on a relatively coarse grid while the arclength of the wire is solved
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;phase0.t_initial&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;phase0.t_duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">2.0</span>
 
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;phase0.states:x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase0</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;phase0.states:y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase0</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;phase0.states:v&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase0</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9.9</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;phase0.controls:theta&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase0</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;control_input&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;phase0.states:x&#39;</span><span class="p">,</span> <span class="n">phase0</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">]))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;phase0.states:y&#39;</span><span class="p">,</span> <span class="n">phase0</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;phase0.states:v&#39;</span><span class="p">,</span> <span class="n">phase0</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9.9</span><span class="p">]))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;phase0.controls:theta&#39;</span><span class="p">,</span> <span class="n">phase0</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;theta&#39;</span><span class="p">,</span> <span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">]))</span>
+
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;phase0.parameters:g&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">9.80665</span>
 
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;phase1.states:S&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -1386,9 +1387,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -1467,9 +1468,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -1548,9 +1549,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -1629,9 +1630,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -1710,9 +1711,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -1791,9 +1792,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -1876,9 +1877,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -1957,9 +1958,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 67, in run_problem
     problem.final_setup()
@@ -2038,9 +2039,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -2123,9 +2124,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -2208,9 +2209,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -2293,9 +2294,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -2378,9 +2379,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -2463,9 +2464,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -2552,9 +2553,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -2637,9 +2638,9 @@ Call stack:
     method(self)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/utils/doc_utils.py&quot;, line 119, in wrapped
     method(self)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
-  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 140, in test_brachistochrone_tandem_phases
+  File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/examples/brachistochrone/doc/test_doc_brachistochrone_tandem_phases.py&quot;, line 141, in test_brachistochrone_tandem_phases
     dm.run_problem(p)
   File &quot;/usr/share/miniconda/envs/test/lib/python3.8/site-packages/dymos/run_problem.py&quot;, line 73, in run_problem
     problem.run_driver()
@@ -2662,7 +2663,7 @@ Arguments: ()
 Message: &#39;checking auto_ivc_warnings&#39;
 Arguments: ()
 INFO: checking auto_ivc_warnings
-Full total jacobian was computed 3 times, taking 0.533883 seconds.
+Full total jacobian was computed 3 times, taking 0.559321 seconds.
 Total jacobian shape: (220, 287) 
 
 
@@ -2671,8 +2672,8 @@ FWD solves: 42   REV solves: 0
 Total colors vs. total size: 42 vs 287  (85.4% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.533883 sec.
-Time to compute coloring: 0.550419 sec.
+Time to compute sparsity: 0.559321 sec.
+Time to compute coloring: 0.569636 sec.
 
 
 Optimization Problem -- Optimization using pyOpt_sparse
@@ -2681,11 +2682,11 @@ Optimization Problem -- Optimization using pyOpt_sparse
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                   16.7049
-       User Objective Time :       0.6133
-       User Sensitivity Time :     4.3271
-       Interface Time :            1.6464
-       Opt Solver Time:           10.1180
+    Total Time:                   16.0200
+       User Objective Time :       0.6320
+       User Sensitivity Time :     4.3765
+       Interface Time :            1.6783
+       Opt Solver Time:            9.3332
     Calls to Objective Function :     134
     Calls to Sens Function :          103
 

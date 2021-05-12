@@ -1417,11 +1417,11 @@ only significant change is that we have a new component,
 
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.t_initial&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.t_duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">500.0</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">350000.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">185000.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:vx&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1627.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:vy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mf">1.0E-6</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:m&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">50000</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">350000.0</span><span class="p">])</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">185000.0</span><span class="p">])</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:vx&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;vx&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1627.0</span><span class="p">])</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:vy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;vy&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.0E-6</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.states:m&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">50000</span><span class="p">])</span>
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.parameters:a_ctrl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.01</span>
 <span class="n">p</span><span class="p">[</span><span class="s1">&#39;traj.phase0.parameters:b_ctrl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">3.0</span>
 
@@ -2965,7 +2965,7 @@ Arguments: ()
 Message: &#39;checking auto_ivc_warnings&#39;
 Arguments: ()
 INFO: checking auto_ivc_warnings
-Full total jacobian was computed 3 times, taking 0.154197 seconds.
+Full total jacobian was computed 3 times, taking 0.155497 seconds.
 Total jacobian shape: (101, 103) 
 
 
@@ -2974,8 +2974,8 @@ FWD solves: 21   REV solves: 0
 Total colors vs. total size: 21 vs 103  (79.6% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.154197 sec.
-Time to compute coloring: 0.153842 sec.
+Time to compute sparsity: 0.155497 sec.
+Time to compute coloring: 0.155642 sec.
 
 
 Optimization Problem -- Optimization using pyOpt_sparse
@@ -2984,11 +2984,11 @@ Optimization Problem -- Optimization using pyOpt_sparse
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                    0.1333
-       User Objective Time :       0.0151
-       User Sensitivity Time :     0.0666
-       Interface Time :            0.0301
-       Opt Solver Time:            0.0215
+    Total Time:                    0.1501
+       User Objective Time :       0.0187
+       User Sensitivity Time :     0.0739
+       Interface Time :            0.0341
+       Opt Solver Time:            0.0234
     Calls to Objective Function :       6
     Calls to Sens Function :            5
 

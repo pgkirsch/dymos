@@ -2286,34 +2286,34 @@ linkage condition, where the range must be equal at the end of the <code>rto</co
 
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.br_to_v1.t_initial&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.br_to_v1.t_duration&#39;</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.br_to_v1.states:r&#39;</span><span class="p">,</span> <span class="n">br_to_v1</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2500.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.br_to_v1.states:v&#39;</span><span class="p">,</span> <span class="n">br_to_v1</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.br_to_v1.states:r&#39;</span><span class="p">,</span> <span class="n">br_to_v1</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2500.0</span><span class="p">]))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.br_to_v1.states:v&#39;</span><span class="p">,</span> <span class="n">br_to_v1</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">]))</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.br_to_v1.parameters:alpha&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.v1_to_vr.t_initial&#39;</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.v1_to_vr.t_duration&#39;</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.v1_to_vr.states:r&#39;</span><span class="p">,</span> <span class="n">v1_to_vr</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">2500</span><span class="p">,</span> <span class="mf">300.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.v1_to_vr.states:v&#39;</span><span class="p">,</span> <span class="n">v1_to_vr</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mf">110.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.v1_to_vr.states:r&#39;</span><span class="p">,</span> <span class="n">v1_to_vr</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2500</span><span class="p">,</span> <span class="mf">300.0</span><span class="p">]))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.v1_to_vr.states:v&#39;</span><span class="p">,</span> <span class="n">v1_to_vr</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mf">110.0</span><span class="p">]))</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.v1_to_vr.parameters:alpha&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rto.t_initial&#39;</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rto.t_duration&#39;</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rto.states:r&#39;</span><span class="p">,</span> <span class="n">rto</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">2500</span><span class="p">,</span> <span class="mf">5000.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rto.states:v&#39;</span><span class="p">,</span> <span class="n">rto</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">110</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rto.states:r&#39;</span><span class="p">,</span> <span class="n">rto</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2500</span><span class="p">,</span> <span class="mf">5000.0</span><span class="p">]))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rto.states:v&#39;</span><span class="p">,</span> <span class="n">rto</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">110</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rto.parameters:alpha&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rotate.t_initial&#39;</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rotate.t_duration&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rotate.states:r&#39;</span><span class="p">,</span> <span class="n">rotate</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">1750</span><span class="p">,</span> <span class="mf">1800.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rotate.states:v&#39;</span><span class="p">,</span> <span class="n">rotate</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mf">85.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rotate.states:r&#39;</span><span class="p">,</span> <span class="n">rotate</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1750</span><span class="p">,</span> <span class="mf">1800.0</span><span class="p">]))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rotate.states:v&#39;</span><span class="p">,</span> <span class="n">rotate</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mf">85.0</span><span class="p">]))</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.rotate.polynomial_controls:alpha&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.climb.t_initial&#39;</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.climb.t_duration&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.climb.states:r&#39;</span><span class="p">,</span> <span class="n">climb</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">5000</span><span class="p">,</span> <span class="mf">5500.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;ft&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.climb.states:v&#39;</span><span class="p">,</span> <span class="n">climb</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">160</span><span class="p">,</span> <span class="mf">170.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;kn&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.climb.states:h&#39;</span><span class="p">,</span> <span class="n">climb</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">35.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;ft&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.climb.states:gam&#39;</span><span class="p">,</span> <span class="n">climb</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ys</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">],</span> <span class="n">nodes</span><span class="o">=</span><span class="s1">&#39;state_input&#39;</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.climb.states:r&#39;</span><span class="p">,</span> <span class="n">climb</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">5000</span><span class="p">,</span> <span class="mf">5500.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;ft&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.climb.states:v&#39;</span><span class="p">,</span> <span class="n">climb</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">160</span><span class="p">,</span> <span class="mf">170.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;kn&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.climb.states:h&#39;</span><span class="p">,</span> <span class="n">climb</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">35.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;ft&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.climb.states:gam&#39;</span><span class="p">,</span> <span class="n">climb</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;gam&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="s1">&#39;traj.climb.controls:alpha&#39;</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span>
 
 <span class="n">dm</span><span class="o">.</span><span class="n">run_problem</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">run_driver</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">simulate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2424,8 +2424,8 @@ FWD solves: 16   REV solves: 0
 Total colors vs. total size: 16 vs 60  (73.3% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.035638 sec.
-Time to compute coloring: 0.024189 sec.
+Time to compute sparsity: 0.035660 sec.
+Time to compute coloring: 0.023592 sec.
 
 Approx coloring for &#39;traj.phases.rto.rhs_all&#39; (class BalancedFieldODEComp)
 
@@ -2434,8 +2434,8 @@ FWD solves: 16   REV solves: 0
 Total colors vs. total size: 16 vs 60  (73.3% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.033341 sec.
-Time to compute coloring: 0.022953 sec.
+Time to compute sparsity: 0.035554 sec.
+Time to compute coloring: 0.023538 sec.
 
 Approx coloring for &#39;traj.phases.v1_to_vr.rhs_all&#39; (class BalancedFieldODEComp)
 
@@ -2444,8 +2444,8 @@ FWD solves: 16   REV solves: 0
 Total colors vs. total size: 16 vs 60  (73.3% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.034030 sec.
-Time to compute coloring: 0.023217 sec.
+Time to compute sparsity: 0.035273 sec.
+Time to compute coloring: 0.023881 sec.
 
 Approx coloring for &#39;traj.phases.rotate.rhs_all&#39; (class BalancedFieldODEComp)
 
@@ -2454,8 +2454,8 @@ FWD solves: 16   REV solves: 0
 Total colors vs. total size: 16 vs 60  (73.3% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.034061 sec.
-Time to compute coloring: 0.023675 sec.
+Time to compute sparsity: 0.035332 sec.
+Time to compute coloring: 0.023946 sec.
 
 Approx coloring for &#39;traj.phases.climb.rhs_all&#39; (class BalancedFieldODEComp)
 
@@ -2464,9 +2464,9 @@ FWD solves: 16   REV solves: 0
 Total colors vs. total size: 16 vs 111  (85.6% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.069185 sec.
-Time to compute coloring: 0.045491 sec.
-Full total jacobian was computed 3 times, taking 1.169114 seconds.
+Time to compute sparsity: 0.072991 sec.
+Time to compute coloring: 0.045738 sec.
+Full total jacobian was computed 3 times, taking 1.220573 seconds.
 Total jacobian shape: (179, 166) 
 
 
@@ -2475,8 +2475,8 @@ FWD solves: 15   REV solves: 0
 Total colors vs. total size: 15 vs 166  (91.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 1.169114 sec.
-Time to compute coloring: 0.158252 sec.
+Time to compute sparsity: 1.220573 sec.
+Time to compute coloring: 0.165030 sec.
 /usr/share/miniconda/envs/test/lib/python3.8/site-packages/openmdao/core/total_jac.py:1719: DerivativesWarning:Constraints or objectives [&#39;traj.phases.climb.path_constraints.path:gam&#39;] cannot be impacted by the design variables of the problem.
 /usr/share/miniconda/envs/test/lib/python3.8/site-packages/openmdao/core/total_jac.py:1719: DerivativesWarning:Constraints or objectives [&#39;traj.phases.climb.path_constraints.path:gam&#39;] cannot be impacted by the design variables of the problem.
 
