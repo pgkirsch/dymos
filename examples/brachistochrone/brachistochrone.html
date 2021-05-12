@@ -1377,7 +1377,10 @@ The following ExplicitComponent computes the state rates for the brachistochrone
 <span class="normal">81</span>
 <span class="normal">82</span>
 <span class="normal">83</span>
-<span class="normal">84</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">openmdao.api</span> <span class="k">as</span> <span class="nn">om</span>
 
 
@@ -1391,23 +1394,26 @@ The following ExplicitComponent computes the state rates for the brachistochrone
 
     <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">nn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s1">&#39;num_nodes&#39;</span><span class="p">]</span>
-        <span class="n">g_default_val</span> <span class="o">=</span> <span class="mf">9.80665</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s1">&#39;static_gravity&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="mf">9.80665</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">nn</span><span class="p">)</span>
 
         <span class="c1"># Inputs</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_input</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nn</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;velocity&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_input</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="n">g_default_val</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;grav. acceleration&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s/s&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s1">&#39;static_gravity&#39;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_input</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="mf">9.80665</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;grav. acceleration&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s/s&#39;</span><span class="p">,</span>
+                           <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dymos.static_target&#39;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_input</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="mf">9.80665</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">nn</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;grav. acceleration&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s/s&#39;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">add_input</span><span class="p">(</span><span class="s1">&#39;theta&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">nn</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;angle of wire&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">add_output</span><span class="p">(</span><span class="s1">&#39;xdot&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nn</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;velocity component in x&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s&#39;</span><span class="p">,</span>
-                        <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;state_rate_source:x&#39;</span><span class="p">,</span> <span class="s1">&#39;state_units:m&#39;</span><span class="p">])</span>
+                        <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dymos.state_rate_source:x&#39;</span><span class="p">,</span> <span class="s1">&#39;dymos.state_units:m&#39;</span><span class="p">])</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">add_output</span><span class="p">(</span><span class="s1">&#39;ydot&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nn</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;velocity component in y&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s&#39;</span><span class="p">,</span>
-                        <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;state_rate_source:y&#39;</span><span class="p">,</span> <span class="s1">&#39;state_units:m&#39;</span><span class="p">])</span>
+                        <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dymos.state_rate_source:y&#39;</span><span class="p">,</span> <span class="s1">&#39;dymos.state_units:m&#39;</span><span class="p">])</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">add_output</span><span class="p">(</span><span class="s1">&#39;vdot&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nn</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;acceleration magnitude&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s**2&#39;</span><span class="p">,</span>
-                        <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;state_rate_source:v&#39;</span><span class="p">,</span> <span class="s1">&#39;state_units:m/s&#39;</span><span class="p">])</span>
+                        <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dymos.state_rate_source:v&#39;</span><span class="p">,</span> <span class="s1">&#39;dymos.state_units:m/s&#39;</span><span class="p">])</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">add_output</span><span class="p">(</span><span class="s1">&#39;check&#39;</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nn</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;check solution: v/sin(theta) = constant&#39;</span><span class="p">,</span>
                         <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
@@ -1619,7 +1625,7 @@ Sub Jacobian with Largest Relative Error: BrachistochroneODE &#39;ode&#39;
 </code></pre></div>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>Full total jacobian was computed 3 times, taking 0.074426 seconds.
+<div class="highlight"><pre><span></span><code>Full total jacobian was computed 3 times, taking 0.065102 seconds.
 Total jacobian shape: (40, 50) 
 
 
@@ -1628,8 +1634,8 @@ FWD solves: 12   REV solves: 0
 Total colors vs. total size: 12 vs 50  (76.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.074426 sec.
-Time to compute coloring: 0.061190 sec.
+Time to compute sparsity: 0.065102 sec.
+Time to compute coloring: 0.051444 sec.
 Optimization terminated successfully.    (Exit mode 0)
             Current function value: 18.016167304638337
             Iterations: 24

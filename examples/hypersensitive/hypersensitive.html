@@ -1385,17 +1385,17 @@ INFO: checking missing_recorders
 WARNING: The Problem has no recorder of any kind attached
 INFO: checking comp_has_no_outputs
 INFO: checking auto_ivc_warnings
-Full total jacobian was computed 3 times, taking 0.615121 seconds.
+Full total jacobian was computed 3 times, taking 0.484061 seconds.
 Total jacobian shape: (239, 328) 
 
 
-Jacobian shape: (239, 328)  ( 2.64% nonzero)
+Jacobian shape: (239, 328)  ( 2.65% nonzero)
 FWD solves: 13   REV solves: 0
 Total colors vs. total size: 13 vs 328  (96.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.615121 sec.
-Time to compute coloring: 0.423646 sec.
+Time to compute sparsity: 0.484061 sec.
+Time to compute coloring: 0.354162 sec.
 
 
 Optimization Problem -- Optimization using pyOpt_sparse
@@ -1404,11 +1404,11 @@ Optimization Problem -- Optimization using pyOpt_sparse
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                    3.7473
-       User Objective Time :       0.0537
-       User Sensitivity Time :     0.3558
-       Interface Time :            0.3751
-       Opt Solver Time:            2.9626
+    Total Time:                    3.7729
+       User Objective Time :       0.0411
+       User Sensitivity Time :     0.2856
+       Interface Time :            0.3668
+       Opt Solver Time:            3.0794
     Calls to Objective Function :      21
     Calls to Sens Function :           21
 
@@ -1750,98 +1750,98 @@ Optimization Problem -- Optimization using pyOpt_sparse
 
    Constraints (i - inequality, e - equality)
       Index  Name                                                           Type          Lower           Value           Upper    Status  Lagrange Multiplier (N/A)
-          0  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -7.401487E-16    0.000000E+00              9.00000E+100
-          1  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.960595E-16    0.000000E+00              9.00000E+100
-          2  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    3.330669E-16    0.000000E+00              9.00000E+100
-          3  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -3.330669E-16    0.000000E+00              9.00000E+100
-          4  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.110223E-16    0.000000E+00              9.00000E+100
-          5  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.960595E-16    0.000000E+00              9.00000E+100
-          6  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.220446E-16    0.000000E+00              9.00000E+100
-          7  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -7.401487E-17    0.000000E+00              9.00000E+100
-          8  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-          9  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.295260E-16    0.000000E+00              9.00000E+100
-         10  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -4.625929E-17    0.000000E+00              9.00000E+100
-         11  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -4.625929E-17    0.000000E+00              9.00000E+100
-         12  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.017704E-16    0.000000E+00              9.00000E+100
-         13  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.775558E-17    0.000000E+00              9.00000E+100
-         14  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -6.013708E-17    0.000000E+00              9.00000E+100
-         15  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.775558E-17    0.000000E+00              9.00000E+100
-         16  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.312965E-17    0.000000E+00              9.00000E+100
-         17  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    4.625929E-17    0.000000E+00              9.00000E+100
-         18  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -4.163336E-17    0.000000E+00              9.00000E+100
-         19  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.312965E-18    0.000000E+00              9.00000E+100
-         20  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.387779E-17    0.000000E+00              9.00000E+100
-         21  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -3.238150E-17    0.000000E+00              9.00000E+100
-         22  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    9.251859E-18    0.000000E+00              9.00000E+100
-         23  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    8.095376E-18    0.000000E+00              9.00000E+100
-         24  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -8.095376E-18    0.000000E+00              9.00000E+100
-         25  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    6.938894E-18    0.000000E+00              9.00000E+100
-         26  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.040834E-17    0.000000E+00              9.00000E+100
-         27  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.312965E-18    0.000000E+00              9.00000E+100
-         28  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.891206E-18    0.000000E+00              9.00000E+100
+          0  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    7.401487E-17    0.000000E+00              9.00000E+100
+          1  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -3.700743E-17    0.000000E+00              9.00000E+100
+          2  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -3.700743E-17    0.000000E+00              9.00000E+100
+          3  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    3.700743E-17    0.000000E+00              9.00000E+100
+          4  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+          5  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.850372E-17    0.000000E+00              9.00000E+100
+          6  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -7.401487E-17    0.000000E+00              9.00000E+100
+          7  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.850372E-17    0.000000E+00              9.00000E+100
+          8  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.480297E-16    0.000000E+00              9.00000E+100
+          9  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -7.401487E-17    0.000000E+00              9.00000E+100
+         10  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    4.625929E-17    0.000000E+00              9.00000E+100
+         11  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.017704E-16    0.000000E+00              9.00000E+100
+         12  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -4.625929E-17    0.000000E+00              9.00000E+100
+         13  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    5.551115E-17    0.000000E+00              9.00000E+100
+         14  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -5.551115E-17    0.000000E+00              9.00000E+100
+         15  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    4.625929E-17    0.000000E+00              9.00000E+100
+         16  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+         17  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    4.163336E-17    0.000000E+00              9.00000E+100
+         18  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.312965E-17    0.000000E+00              9.00000E+100
+         19  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.387779E-17    0.000000E+00              9.00000E+100
+         20  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.312965E-18    0.000000E+00              9.00000E+100
+         21  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -4.394633E-17    0.000000E+00              9.00000E+100
+         22  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -6.938894E-18    0.000000E+00              9.00000E+100
+         23  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.156482E-17    0.000000E+00              9.00000E+100
+         24  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.040834E-17    0.000000E+00              9.00000E+100
+         25  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -6.938894E-18    0.000000E+00              9.00000E+100
+         26  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    5.782412E-18    0.000000E+00              9.00000E+100
+         27  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -9.251859E-18    0.000000E+00              9.00000E+100
+         28  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -5.782412E-19    0.000000E+00              9.00000E+100
          29  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -3.469447E-18    0.000000E+00              9.00000E+100
-         30  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -4.047688E-18    0.000000E+00              9.00000E+100
+         30  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    4.047688E-18    0.000000E+00              9.00000E+100
          31  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.734723E-18    0.000000E+00              9.00000E+100
-         32  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    5.782412E-19    0.000000E+00              9.00000E+100
-         33  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    4.047688E-18    0.000000E+00              9.00000E+100
-         34  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-         35  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.445603E-19    0.000000E+00              9.00000E+100
+         32  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.891206E-18    0.000000E+00              9.00000E+100
+         33  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -5.204170E-18    0.000000E+00              9.00000E+100
+         34  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    5.782412E-19    0.000000E+00              9.00000E+100
+         35  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.011922E-18    0.000000E+00              9.00000E+100
          36  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.156482E-18    0.000000E+00              9.00000E+100
-         37  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.011922E-18    0.000000E+00              9.00000E+100
-         38  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.301043E-18    0.000000E+00              9.00000E+100
-         39  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.445603E-19    0.000000E+00              9.00000E+100
-         40  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.445603E-19    0.000000E+00              9.00000E+100
-         41  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.891206E-19    0.000000E+00              9.00000E+100
-         42  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.168404E-19    0.000000E+00              9.00000E+100
-         43  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.445603E-19    0.000000E+00              9.00000E+100
-         44  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.168404E-19    0.000000E+00              9.00000E+100
-         45  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    9.577119E-19    0.000000E+00              9.00000E+100
-         46  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    5.375836E-19    0.000000E+00              9.00000E+100
-         47  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -5.601711E-19    0.000000E+00              9.00000E+100
-         48  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.192622E-18    0.000000E+00              9.00000E+100
-         49  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    9.757820E-19    0.000000E+00              9.00000E+100
-         50  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -5.782412E-19    0.000000E+00              9.00000E+100
-         51  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+         37  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+         38  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    7.228014E-19    0.000000E+00              9.00000E+100
+         39  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.011922E-18    0.000000E+00              9.00000E+100
+         40  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.891206E-19    0.000000E+00              9.00000E+100
+         41  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -7.228014E-20    0.000000E+00              9.00000E+100
+         42  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.084202E-18    0.000000E+00              9.00000E+100
+         43  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    3.975408E-19    0.000000E+00              9.00000E+100
+         44  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    5.421011E-19    0.000000E+00              9.00000E+100
+         45  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -6.324513E-19    0.000000E+00              9.00000E+100
+         46  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -4.517509E-21    0.000000E+00              9.00000E+100
+         47  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    6.685913E-19    0.000000E+00              9.00000E+100
+         48  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.638225E-18    0.000000E+00              9.00000E+100
+         49  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.807004E-19    0.000000E+00              9.00000E+100
+         50  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    7.228014E-20    0.000000E+00              9.00000E+100
+         51  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.445603E-19    0.000000E+00              9.00000E+100
          52  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    5.782412E-19    0.000000E+00              9.00000E+100
-         53  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -7.228014E-19    0.000000E+00              9.00000E+100
-         54  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.457525E-18    0.000000E+00              9.00000E+100
-         55  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.156482E-18    0.000000E+00              9.00000E+100
-         56  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.312965E-18    0.000000E+00              9.00000E+100
-         57  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.457525E-18    0.000000E+00              9.00000E+100
-         58  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.023844E-18    0.000000E+00              9.00000E+100
-         59  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -8.673617E-19    0.000000E+00              9.00000E+100
-         60  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -6.071532E-18    0.000000E+00              9.00000E+100
-         61  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -8.673617E-19    0.000000E+00              9.00000E+100
-         62  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -5.204170E-18    0.000000E+00              9.00000E+100
-         63  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -9.830100E-18    0.000000E+00              9.00000E+100
-         64  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -5.204170E-18    0.000000E+00              9.00000E+100
-         65  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    8.095376E-18    0.000000E+00              9.00000E+100
-         66  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.387779E-17    0.000000E+00              9.00000E+100
-         67  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.619075E-17    0.000000E+00              9.00000E+100
-         68  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -3.469447E-18    0.000000E+00              9.00000E+100
-         69  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.850372E-17    0.000000E+00              9.00000E+100
-         70  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -5.782412E-18    0.000000E+00              9.00000E+100
+         53  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.590163E-18    0.000000E+00              9.00000E+100
+         54  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.301043E-18    0.000000E+00              9.00000E+100
+         55  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.445603E-19    0.000000E+00              9.00000E+100
+         56  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.156482E-18    0.000000E+00              9.00000E+100
+         57  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.891206E-19    0.000000E+00              9.00000E+100
+         58  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.023844E-18    0.000000E+00              9.00000E+100
+         59  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    8.673617E-19    0.000000E+00              9.00000E+100
+         60  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+         61  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    4.336809E-18    0.000000E+00              9.00000E+100
+         62  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.891206E-18    0.000000E+00              9.00000E+100
+         63  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    9.830100E-18    0.000000E+00              9.00000E+100
+         64  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.312965E-18    0.000000E+00              9.00000E+100
+         65  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.156482E-18    0.000000E+00              9.00000E+100
+         66  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    3.122502E-17    0.000000E+00              9.00000E+100
+         67  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -3.469447E-18    0.000000E+00              9.00000E+100
+         68  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    9.251859E-18    0.000000E+00              9.00000E+100
+         69  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    4.625929E-18    0.000000E+00              9.00000E+100
+         70  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -8.095376E-18    0.000000E+00              9.00000E+100
          71  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -6.938894E-18    0.000000E+00              9.00000E+100
-         72  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.312965E-18    0.000000E+00              9.00000E+100
-         73  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.619075E-17    0.000000E+00              9.00000E+100
-         74  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -4.625929E-18    0.000000E+00              9.00000E+100
-         75  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    5.088522E-17    0.000000E+00              9.00000E+100
-         76  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.387779E-17    0.000000E+00              9.00000E+100
-         77  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -7.401487E-17    0.000000E+00              9.00000E+100
-         78  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -4.163336E-17    0.000000E+00              9.00000E+100
-         79  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    8.326673E-17    0.000000E+00              9.00000E+100
-         80  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.017704E-16    0.000000E+00              9.00000E+100
-         81  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.960595E-16    0.000000E+00              9.00000E+100
-         82  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -6.476301E-17    0.000000E+00              9.00000E+100
-         83  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.850372E-17    0.000000E+00              9.00000E+100
-         84  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.220446E-16    0.000000E+00              9.00000E+100
-         85  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.665335E-16    0.000000E+00              9.00000E+100
-         86  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    7.401487E-17    0.000000E+00              9.00000E+100
-         87  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    6.476301E-16    0.000000E+00              9.00000E+100
-         88  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.110223E-16    0.000000E+00              9.00000E+100
-         89  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.850372E-16    0.000000E+00              9.00000E+100
+         72  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -3.700743E-17    0.000000E+00              9.00000E+100
+         73  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -4.625929E-17    0.000000E+00              9.00000E+100
+         74  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    5.782412E-17    0.000000E+00              9.00000E+100
+         75  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -5.551115E-17    0.000000E+00              9.00000E+100
+         76  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.775558E-17    0.000000E+00              9.00000E+100
+         77  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    2.775558E-17    0.000000E+00              9.00000E+100
+         78  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.526557E-16    0.000000E+00              9.00000E+100
+         79  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    4.625929E-17    0.000000E+00              9.00000E+100
+         80  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.775558E-17    0.000000E+00              9.00000E+100
+         81  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.202742E-16    0.000000E+00              9.00000E+100
+         82  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.017704E-16    0.000000E+00              9.00000E+100
+         83  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -2.035409E-16    0.000000E+00              9.00000E+100
+         84  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    3.700743E-17    0.000000E+00              9.00000E+100
+         85  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    3.700743E-17    0.000000E+00              9.00000E+100
+         86  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00    1.480297E-16    0.000000E+00              9.00000E+100
+         87  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -3.700743E-17    0.000000E+00              9.00000E+100
+         88  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -3.700743E-17    0.000000E+00              9.00000E+100
+         89  traj.phases.phase0.collocation_constraint.defects:x               e   0.000000E+00   -1.110223E-16    0.000000E+00              9.00000E+100
          90  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -3.263776E-08    0.000000E+00              9.00000E+100
-         91  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -2.767389E-09    0.000000E+00              9.00000E+100
+         91  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -2.767390E-09    0.000000E+00              9.00000E+100
          92  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -3.060948E-08    0.000000E+00              9.00000E+100
          93  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -2.766599E-08    0.000000E+00              9.00000E+100
          94  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -1.687911E-08    0.000000E+00              9.00000E+100
@@ -1863,15 +1863,15 @@ Optimization Problem -- Optimization using pyOpt_sparse
         110  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -1.725085E-09    0.000000E+00              9.00000E+100
         111  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -1.688025E-09    0.000000E+00              9.00000E+100
         112  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -1.741365E-09    0.000000E+00              9.00000E+100
-        113  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -2.344933E-09    0.000000E+00              9.00000E+100
+        113  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -2.344934E-09    0.000000E+00              9.00000E+100
         114  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -2.692930E-09    0.000000E+00              9.00000E+100
         115  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -3.617070E-09    0.000000E+00              9.00000E+100
         116  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -4.847928E-09    0.000000E+00              9.00000E+100
-        117  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -5.191016E-09    0.000000E+00              9.00000E+100
+        117  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -5.191017E-09    0.000000E+00              9.00000E+100
         118  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -6.020417E-09    0.000000E+00              9.00000E+100
         119  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -7.421865E-09    0.000000E+00              9.00000E+100
         120  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -7.926399E-09    0.000000E+00              9.00000E+100
-        121  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -9.070645E-09    0.000000E+00              9.00000E+100
+        121  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -9.070646E-09    0.000000E+00              9.00000E+100
         122  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -1.044615E-08    0.000000E+00              9.00000E+100
         123  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -1.081695E-08    0.000000E+00              9.00000E+100
         124  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -1.162814E-08    0.000000E+00              9.00000E+100
@@ -1915,19 +1915,19 @@ Optimization Problem -- Optimization using pyOpt_sparse
         162  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -7.387185E-09    0.000000E+00              9.00000E+100
         163  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -7.382258E-09    0.000000E+00              9.00000E+100
         164  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -5.534376E-09    0.000000E+00              9.00000E+100
-        165  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -4.701174E-09    0.000000E+00              9.00000E+100
+        165  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -4.701175E-09    0.000000E+00              9.00000E+100
         166  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -3.455361E-09    0.000000E+00              9.00000E+100
         167  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -2.791335E-09    0.000000E+00              9.00000E+100
-        168  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -2.924309E-09    0.000000E+00              9.00000E+100
-        169  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -3.265418E-09    0.000000E+00              9.00000E+100
+        168  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -2.924310E-09    0.000000E+00              9.00000E+100
+        169  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -3.265419E-09    0.000000E+00              9.00000E+100
         170  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -1.991133E-09    0.000000E+00              9.00000E+100
         171  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -1.751690E-09    0.000000E+00              9.00000E+100
         172  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -2.301217E-09    0.000000E+00              9.00000E+100
         173  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -1.202696E-09    0.000000E+00              9.00000E+100
-        174  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -6.034652E-10    0.000000E+00              9.00000E+100
-        175  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -5.319635E-10    0.000000E+00              9.00000E+100
+        174  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -6.034656E-10    0.000000E+00              9.00000E+100
+        175  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -5.319636E-10    0.000000E+00              9.00000E+100
         176  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -3.565547E-10    0.000000E+00              9.00000E+100
-        177  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -8.051671E-10    0.000000E+00              9.00000E+100
+        177  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -8.051677E-10    0.000000E+00              9.00000E+100
         178  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -2.797383E-09    0.000000E+00              9.00000E+100
         179  traj.phases.phase0.collocation_constraint.defects:xL              e   0.000000E+00   -1.097801E-09    0.000000E+00              9.00000E+100
         180  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
@@ -1936,15 +1936,15 @@ Optimization Problem -- Optimization using pyOpt_sparse
         183  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         184  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         185  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        186  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        187  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        188  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    3.469447E-18    0.000000E+00              9.00000E+100
+        186  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00   -6.938894E-18    0.000000E+00              9.00000E+100
+        187  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    6.938894E-18    0.000000E+00              9.00000E+100
+        188  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         189  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         190  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        191  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+        191  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    8.673617E-19    0.000000E+00              9.00000E+100
         192  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    4.336809E-19    0.000000E+00              9.00000E+100
         193  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        194  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+        194  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    4.336809E-19    0.000000E+00              9.00000E+100
         195  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    4.336809E-19    0.000000E+00              9.00000E+100
         196  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    4.336809E-19    0.000000E+00              9.00000E+100
         197  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
@@ -1952,8 +1952,8 @@ Optimization Problem -- Optimization using pyOpt_sparse
         199  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         200  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         201  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        202  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        203  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+        202  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00   -6.938894E-18    0.000000E+00              9.00000E+100
+        203  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00   -6.938894E-18    0.000000E+00              9.00000E+100
         204  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         205  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         206  traj.phases.phase0.continuity_comp.defect_states:x                e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
@@ -1964,7 +1964,7 @@ Optimization Problem -- Optimization using pyOpt_sparse
         211  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         212  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         213  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        214  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00   -5.551115E-17    0.000000E+00              9.00000E+100
+        214  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         215  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         216  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         217  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
@@ -1985,65 +1985,65 @@ Optimization Problem -- Optimization using pyOpt_sparse
         232  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         233  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         234  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        235  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00   -1.110223E-16    0.000000E+00              9.00000E+100
+        235  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         236  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         237  traj.phases.phase0.continuity_comp.defect_states:xL               e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        238  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+        238  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    5.551115E-17    0.000000E+00              9.00000E+100
         239  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -5.551115E-17    0.000000E+00              9.00000E+100
         240  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        241  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        242  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -6.938894E-18    0.000000E+00              9.00000E+100
-        243  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+        241  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -1.387779E-17    0.000000E+00              9.00000E+100
+        242  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -1.387779E-17    0.000000E+00              9.00000E+100
+        243  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -6.938894E-18    0.000000E+00              9.00000E+100
         244  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         245  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -1.734723E-18    0.000000E+00              9.00000E+100
         246  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        247  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        248  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -4.336809E-19    0.000000E+00              9.00000E+100
+        247  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    8.673617E-19    0.000000E+00              9.00000E+100
+        248  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         249  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        250  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -1.192622E-18    0.000000E+00              9.00000E+100
-        251  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -3.252607E-19    0.000000E+00              9.00000E+100
-        252  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -2.168404E-19    0.000000E+00              9.00000E+100
+        250  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -2.168404E-19    0.000000E+00              9.00000E+100
+        251  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -1.626303E-19    0.000000E+00              9.00000E+100
+        252  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    6.505213E-19    0.000000E+00              9.00000E+100
         253  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        254  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        255  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        256  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -1.734723E-18    0.000000E+00              9.00000E+100
-        257  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    3.469447E-18    0.000000E+00              9.00000E+100
-        258  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        259  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -6.938894E-18    0.000000E+00              9.00000E+100
-        260  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+        254  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    8.673617E-19    0.000000E+00              9.00000E+100
+        255  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -1.734723E-18    0.000000E+00              9.00000E+100
+        256  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    1.734723E-18    0.000000E+00              9.00000E+100
+        257  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+        258  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    6.938894E-18    0.000000E+00              9.00000E+100
+        259  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+        260  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    1.387779E-17    0.000000E+00              9.00000E+100
         261  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -2.775558E-17    0.000000E+00              9.00000E+100
-        262  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -5.551115E-17    0.000000E+00              9.00000E+100
+        262  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         263  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        264  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    2.220446E-16    0.000000E+00              9.00000E+100
-        265  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        266  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    2.220446E-16    0.000000E+00              9.00000E+100
-        267  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    6.661338E-15    0.000000E+00              9.00000E+100
-        268  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    1.665335E-15    0.000000E+00              9.00000E+100
-        269  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    1.665335E-15    0.000000E+00              9.00000E+100
-        270  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    1.665335E-15    0.000000E+00              9.00000E+100
-        271  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -6.245005E-16    0.000000E+00              9.00000E+100
-        272  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    3.469447E-17    0.000000E+00              9.00000E+100
+        264  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    1.110223E-16    0.000000E+00              9.00000E+100
+        265  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00    1.110223E-16    0.000000E+00              9.00000E+100
+        266  traj.phases.phase0.continuity_comp.defect_controls:u              e   0.000000E+00   -6.661338E-16    0.000000E+00              9.00000E+100
+        267  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    9.992007E-15    0.000000E+00              9.00000E+100
+        268  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -4.996004E-15    0.000000E+00              9.00000E+100
+        269  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -3.330669E-15    0.000000E+00              9.00000E+100
+        270  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -8.326673E-16    0.000000E+00              9.00000E+100
+        271  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -1.457168E-15    0.000000E+00              9.00000E+100
+        272  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -3.816392E-16    0.000000E+00              9.00000E+100
         273  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -2.081668E-16    0.000000E+00              9.00000E+100
-        274  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
+        274  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -2.081668E-16    0.000000E+00              9.00000E+100
         275  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        276  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -1.040834E-16    0.000000E+00              9.00000E+100
+        276  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -5.204170E-17    0.000000E+00              9.00000E+100
         277  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -1.734723E-17    0.000000E+00              9.00000E+100
-        278  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -6.071532E-17    0.000000E+00              9.00000E+100
-        279  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -6.071532E-17    0.000000E+00              9.00000E+100
-        280  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -7.806256E-17    0.000000E+00              9.00000E+100
-        281  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -2.168404E-18    0.000000E+00              9.00000E+100
-        282  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    3.903128E-17    0.000000E+00              9.00000E+100
-        283  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        284  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -7.806256E-17    0.000000E+00              9.00000E+100
-        285  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    5.204170E-17    0.000000E+00              9.00000E+100
+        278  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    4.336809E-18    0.000000E+00              9.00000E+100
+        279  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -1.951564E-17    0.000000E+00              9.00000E+100
+        280  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -6.938894E-17    0.000000E+00              9.00000E+100
+        281  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    3.035766E-17    0.000000E+00              9.00000E+100
+        282  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -1.301043E-17    0.000000E+00              9.00000E+100
+        283  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -7.806256E-17    0.000000E+00              9.00000E+100
+        284  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    7.806256E-17    0.000000E+00              9.00000E+100
+        285  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    3.642919E-16    0.000000E+00              9.00000E+100
         286  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    3.122502E-16    0.000000E+00              9.00000E+100
-        287  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -5.204170E-16    0.000000E+00              9.00000E+100
-        288  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -6.245005E-16    0.000000E+00              9.00000E+100
-        289  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
-        290  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -2.081668E-15    0.000000E+00              9.00000E+100
-        291  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    8.326673E-16    0.000000E+00              9.00000E+100
+        287  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    2.081668E-16    0.000000E+00              9.00000E+100
+        288  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -2.081668E-16    0.000000E+00              9.00000E+100
+        289  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -4.163336E-16    0.000000E+00              9.00000E+100
+        290  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    2.498002E-15    0.000000E+00              9.00000E+100
+        291  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    2.498002E-15    0.000000E+00              9.00000E+100
         292  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    1.665335E-15    0.000000E+00              9.00000E+100
-        293  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -3.330669E-15    0.000000E+00              9.00000E+100
+        293  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00    0.000000E+00    0.000000E+00              9.00000E+100
         294  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -3.330669E-15    0.000000E+00              9.00000E+100
         295  traj.phases.phase0.continuity_comp.defect_control_rates:u_rate    e   0.000000E+00   -6.661338E-15    0.000000E+00              9.00000E+100
         296  traj.phases.phase0.final_boundary_constraints.final_value:x       e   1.000000E+00    1.000000E+00    1.000000E+00              9.00000E+100

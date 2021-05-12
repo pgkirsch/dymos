@@ -1175,13 +1175,13 @@ Dymos now can use this capability to specify the rate source and default units o
 The following code demonstrates how to tag state rate sources and provide their default units.</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">dymos &gt;= 0.17.0</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>self.add_output(&#39;xdot&#39;, val=np.zeros(nn), desc=&#39;velocity component in x&#39;, units=&#39;m/s&#39;,
-                tags=[&#39;state_rate_source:x&#39;, &#39;state_units:m&#39;])
+                tags=[&#39;dymos.state_rate_source:x&#39;, &#39;dymos.state_units:m&#39;])
 
 self.add_output(&#39;ydot&#39;, val=np.zeros(nn), desc=&#39;velocity component in y&#39;, units=&#39;m/s&#39;,
-                tags=[&#39;state_rate_source:y&#39;, &#39;state_units:m&#39;])
+                tags=[&#39;dymos.state_rate_source:y&#39;, &#39;dymos.state_units:m&#39;])
 
 self.add_output(&#39;vdot&#39;, val=np.zeros(nn), desc=&#39;acceleration magnitude&#39;, units=&#39;m/s**2&#39;,
-                tags=[&#39;state_rate_source:v&#39;, &#39;state_units:m/s&#39;])
+                tags=[&#39;dymos.state_rate_source:v&#39;, &#39;dymos.state_units:m/s&#39;])
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">dymos &lt; 0.17.0</label><div class="tabbed-content">

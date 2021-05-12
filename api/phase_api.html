@@ -1172,7 +1172,7 @@ The Phase object is an OpenMDAO Group which contains the options for the variabl
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">add_parameter</label><div class="tabbed-content">
 <div class="admonition abstract">
-<p><strong>add_parameter(self, name, val=unspecified, units=unspecified, opt=False, desc=unspecified, lower=unspecified, upper=unspecified, scaler=unspecified, adder=unspecified, ref0=unspecified, ref=unspecified, targets=unspecified, shape=unspecified, dynamic=unspecified, include_timeseries=unspecified)</strong></p>
+<p><strong>add_parameter(self, name, val=unspecified, units=unspecified, opt=False, desc=unspecified, lower=unspecified, upper=unspecified, scaler=unspecified, adder=unspecified, ref0=unspecified, ref=unspecified, targets=unspecified, shape=unspecified, dynamic=unspecified, static_target=unspecified, include_timeseries=unspecified)</strong></p>
 <p>Add a parameter (static control variable) to the phase.</p>
 <p><strong>Arguments:</strong></p>
 <p><strong>name</strong>: Name of the parameter.</p>
@@ -1189,6 +1189,7 @@ The Phase object is an OpenMDAO Group which contains the options for the variabl
 <p><strong>targets</strong>: Targets in the ODE to which this parameter is connected. In the future, if left _unspecified (the default), the phase parameter will try to connect to an ODE input of the same name. Set targets to None to prevent this.</p>
 <p><strong>shape</strong>: The shape of the parameter.</p>
 <p><strong>dynamic</strong>: True if the targets in the ODE may be dynamic (if the inputs are sized to the number of nodes) else False.</p>
+<p><strong>static_target</strong>: True if the targets in the ODE are not shaped with num_nodes as the first dimension (meaning they cannot have a unique value at each node).  Otherwise False.</p>
 <p><strong>include_timeseries</strong>: True if the static parameters should be included in output timeseries, else False.</p>
 </div>
 </div>
@@ -1332,7 +1333,7 @@ polynomial is (order + 1).</p>
 </div>
 <input id="__tabbed_1_11" name="__tabbed_1" type="radio" /><label for="__tabbed_1_11">set_parameter_options</label><div class="tabbed-content">
 <div class="admonition abstract">
-<p><strong>set_parameter_options(self, name, val=unspecified, units=unspecified, opt=False, desc=unspecified, lower=unspecified, upper=unspecified, scaler=unspecified, adder=unspecified, ref0=unspecified, ref=unspecified, targets=unspecified, shape=unspecified, dynamic=unspecified, include_timeseries=unspecified)</strong></p>
+<p><strong>set_parameter_options(self, name, val=unspecified, units=unspecified, opt=False, desc=unspecified, lower=unspecified, upper=unspecified, scaler=unspecified, adder=unspecified, ref0=unspecified, ref=unspecified, targets=unspecified, shape=unspecified, dynamic=unspecified, static_target=unspecified, include_timeseries=unspecified)</strong></p>
 <p>Set options for an existing parameter (static control variable) in the phase.</p>
 <p><strong>Arguments:</strong></p>
 <p><strong>name</strong>: Name of the parameter.</p>
@@ -1348,7 +1349,8 @@ polynomial is (order + 1).</p>
 <p><strong>ref</strong>: The unit-reference value of the parameter for the optimizer.</p>
 <p><strong>targets</strong>: Targets in the ODE to which this parameter is connected. In the future, if left _unspecified (the default), the phase parameter will try to connect to an ODE input of the same name. Set targets to None to prevent this.</p>
 <p><strong>shape</strong>: The shape of the parameter.</p>
-<p><strong>dynamic</strong>: True if the targets in the ODE may be dynamic (if the inputs are sized to the number of nodes) else False.</p>
+<p><strong>dynamic</strong>: True if the targets in the ODE may be dynamic (if the inputs are sized to the number of nodes) else False.  This option is deprecated.</p>
+<p><strong>static_target</strong>: True if the targets in the ODE are not shaped with num_nodes as the first dimension (meaning they cannot have a unique value at each node).  Otherwise False.</p>
 <p><strong>include_timeseries</strong>: True if the static parameters should be included in output timeseries, else False.</p>
 </div>
 </div>

@@ -1172,7 +1172,7 @@ a certain magnitude between two phases:</p>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">add_parameter</label><div class="tabbed-content">
 <div class="admonition abstract">
-<p><strong>add_parameter(self, name, units, val=unspecified, desc=unspecified, opt=False, targets=unspecified, lower=unspecified, upper=unspecified, scaler=unspecified, adder=unspecified, ref0=unspecified, ref=unspecified, shape=unspecified, dynamic=unspecified)</strong></p>
+<p><strong>add_parameter(self, name, units, val=unspecified, desc=unspecified, opt=False, targets=unspecified, lower=unspecified, upper=unspecified, scaler=unspecified, adder=unspecified, ref0=unspecified, ref=unspecified, shape=unspecified, dynamic=unspecified, static_target=unspecified)</strong></p>
 <p>Add a parameter (static control) to the trajectory.</p>
 <p><strong>Arguments:</strong></p>
 <p><strong>name</strong>: Name of the parameter.</p>
@@ -1189,6 +1189,7 @@ a certain magnitude between two phases:</p>
 <p><strong>ref</strong>: The unit-reference value of the parameter for the optimizer.</p>
 <p><strong>shape</strong>: The shape of the parameter.</p>
 <p><strong>dynamic</strong>: True if the targets in the ODE may be dynamic (if the inputs are sized to the number of nodes) else False.</p>
+<p><strong>static_target</strong>: True if the targets in the ODE are not shaped with num_nodes as the first dimension (meaning they cannot have a unique value at each node).  Otherwise False.</p>
 </div>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">add_phase</label><div class="tabbed-content">

@@ -1752,13 +1752,6 @@ be represented by a second-order polynomial.</p>
 <td>The description of the control variable.</td>
 </tr>
 <tr>
-<td>dynamic</td>
-<td>True</td>
-<td>[True, False]</td>
-<td>['bool']</td>
-<td>If True, the value of the shape of the parameter will be (num_nodes, ...), allowing the variable to be used as either a static or dynamic control.  This impacts the shape of the partial derivatives matrix.  Unless a parameter is large and broadcasting a value to each individual node would be inefficient, users should stick to the default value of True.</td>
-</tr>
-<tr>
 <td>fix_final</td>
 <td>False</td>
 <td>[True, False]</td>
@@ -1932,13 +1925,6 @@ Polynomial controls are specified at some limited number of points throughout a 
 <td>The description of the control variable.</td>
 </tr>
 <tr>
-<td>dynamic</td>
-<td>True</td>
-<td>[True, False]</td>
-<td>['bool']</td>
-<td>If True, the value of the shape of the parameter will be (num_nodes, ...), allowing the variable to be used as either a static or dynamic control.  This impacts the shape of the partial derivatives matrix.  Unless a parameter is large and broadcasting a value to each individual node would be inefficient, users should stick to the default value of True.</td>
-</tr>
-<tr>
 <td>fix_final</td>
 <td>False</td>
 <td>[True, False]</td>
@@ -2093,10 +2079,10 @@ If not optimized they can be targets for connections from outside of the Phase o
 </tr>
 <tr>
 <td>dynamic</td>
-<td>True</td>
-<td>[True, False]</td>
-<td>['bool']</td>
-<td>True if this parameter can be used as a dynamic control, else False</td>
+<td>unspecified</td>
+<td>[True, False, unspecified]</td>
+<td>N/A</td>
+<td>True if this parameter can be used as a dynamic control, else False.If _unspecified, attempt to determine through introspection.</td>
 </tr>
 <tr>
 <td>include_timeseries</td>
@@ -2153,6 +2139,13 @@ If not optimized they can be targets for connections from outside of the Phase o
 <td>N/A</td>
 <td>N/A</td>
 <td>The shape of the parameter.</td>
+</tr>
+<tr>
+<td>static_target</td>
+<td>unspecified</td>
+<td>[True, False, unspecified]</td>
+<td>N/A</td>
+<td>True if the target of this parameter does NOT have a unique value at each node in the ODE.If _unspecified, attempt to determine through introspection.</td>
 </tr>
 <tr>
 <td>targets</td>
